@@ -12,7 +12,7 @@ class Car {
 
   @override
   String toString() {
-    return '${name} - ${yearOfProduction}';
+    return '$name - $yearOfProduction';
   }
 
   void doSomething() {
