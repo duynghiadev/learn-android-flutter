@@ -1,24 +1,9 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
-
-String s1 = 'How are you?';
-String s2 = 'I\'m fine';
-
-var s3 = '$s1 - $s2'; // string concatenation
-int x = 10;
-int y = x * 2;
-
-// what about an array ?
-List<int> numbers = [1, 2, 3, 4, 5];
-
-// How to "map" an array
-List<String> stringNumbers = numbers.map((number) {
-  return 'value = $number';
-}).toList();
+import 'package:myapp/calculation.dart';
+import 'package:myapp/car.dart'; // calculation is a "module"
 
 void main() {
-  // classical way of iterating
+  // Classical way of iterating
   // for (int i = 0; i < numbers.length; i++) {
   //   print('for: ${numbers[i]}');
   // }
@@ -26,13 +11,25 @@ void main() {
   numbers.forEach((number) {
     print('forEach: ${number}');
   });
+
+  var myCar = Car(name: 'Mercedes-Maybach S-Class', yearOfProduction: 2020);
+  // Assigning a function to handleEvent
+  myCar.handleEvent = () {
+    print('Handling event...');
+  };
+
+  myCar.doSomething();
+
+  myCar.sayHello('Duy Nghia');
+  myCar.sayGoodbye(firstName: 'Ronaldo');
+
   runApp(
     Center(
-        child: Text(
-      '$numbers',
-      // s3,
-      style: TextStyle(fontSize: 30),
-      textDirection: TextDirection.ltr,
-    )),
+      child: Text(
+        '${myCar.toString()}',
+        style: TextStyle(fontSize: 30),
+        textDirection: TextDirection.ltr,
+      ),
+    ),
   );
 }
