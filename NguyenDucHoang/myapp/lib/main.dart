@@ -8,9 +8,9 @@ void main() {
   //   print('for: ${numbers[i]}');
   // }
 
-  numbers.forEach((number) {
-    print('forEach: ${number}');
-  });
+  for (var number in numbers) {
+    print('forEach: $number');
+  }
 
   var myCar = Car(name: 'Mercedes-Maybach S-Class', yearOfProduction: 2020);
   // Assigning a function to handleEvent
@@ -26,8 +26,8 @@ void main() {
   runApp(
     Center(
       child: Text(
-        '${myCar.toString()}',
-        style: TextStyle(fontSize: 30),
+        myCar.toString(),
+        style: const TextStyle(fontSize: 30),
         textDirection: TextDirection.ltr,
       ),
     ),
