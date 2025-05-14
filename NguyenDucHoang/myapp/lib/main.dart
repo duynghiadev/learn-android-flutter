@@ -12,7 +12,7 @@ void main() {
     print('forEach: $number');
   }
 
-  var myCar = Car(name: 'Mercedes-Maybach S-Class', yearOfProduction: 2020);
+  var myCar = Car(name: 'Mercedes-Maybach S-Class', yearOfProduction: 2025);
   // Assigning a function to handleEvent
   myCar.handleEvent = () {
     print('Handling event...');

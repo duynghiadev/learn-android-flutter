@@ -6,7 +6,6 @@ import 'package:myapp/lesson/loop.dart';
 import 'package:myapp/lesson/map.dart';
 import 'package:myapp/lesson/operator.dart';
 import 'package:myapp/lesson/queue.dart';
-import 'package:myapp/lesson/sets.dart';
 import 'package:myapp/model/user.dart';
 
 void main() {
